@@ -22,3 +22,10 @@ jobs:
 
     - name: Run tests
       run: npm test
+
+    - name: Build Image
+      uses: docker/build-push-action@v4
+      with:
+        context: .
+        file: ./Dockerfile
+        tags: myimagen/claseviernes:latest
